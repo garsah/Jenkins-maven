@@ -31,6 +31,7 @@ apt-get -y install docker-ce docker-ce-cli containerd.io
 RUN curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 
 RUN usermod -aG docker jenkins
+sudo chmod 777 /var/run/docker.sock
 
 USER jenkins
 
